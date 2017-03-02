@@ -15,15 +15,16 @@
     float: right;
     width: 350px;
 }
-#citylist{
+
+#citylist {
     float: left;
-    width:150px;
-}
-#configSet{
-    float: left;
-    width:200px;
+    width: 150px;
 }
 
+#configSet {
+    float: left;
+    width: 200px;
+}
 
 #fullPage {
     /*transform: scale(0.3); */
@@ -34,5 +35,16 @@
 }
 
 label {
-    display: block
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    margin-left: 4px;
+}
+
+buttom{
+    margin-top: 4px;
+}
+
+[v-cloak] {
+    display: none;
 }

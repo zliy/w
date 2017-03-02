@@ -14,6 +14,7 @@
             <div id="citylist">
                 <p class="description">添加城市名称：</p>
                 <input v-model="editingNewCity" @keydown.enter="addCity" type="text" style="width:80px">
+                <br>
                 <input @click="addCity" type="button" value="添加城市">
                 <ul>
                     <li v-for="each in reversedPlys">{{each.coverCityName}}</li>
@@ -29,7 +30,7 @@
 
                     <label>边线宽度: <br/><input v-model="formStyleConfig.strokeWeight" type="range" min='1' max="10" >{{formStyleConfig.strokeWeight}}</label>
 
-                    <label>选择边线颜色：<br/><input v-model="formStyleConfig.strokeColor" type="color" >hax:{{formStyleConfig.strokeColor}}</label>
+                    <label>选择边线颜色：<br/><input v-model="formStyleConfig.strokeColor" type="color" ></label>
                     <label>边线不透明度：<br/><input v-model="formStrokeOpacity" type="range" min='0' max="100" ></label>
                     <label><input v-model="formStyleConfig.strokeStyle" type="radio" name="strokeStyle" value="solid">实线</label>
                     <label><input v-model="formStyleConfig.strokeStyle" type="radio" name="strokeStyle" value="dashed">虚线</label>
@@ -38,7 +39,7 @@
 
                 <fieldset>
                     <legend>填充</legend>
-                    <label>选择填充颜色：<br/><input v-model="formStyleConfig.fillColor" type="color" >hax:{{formStyleConfig.fillColor}}</label>
+                    <label>选择填充颜色：<br/><input v-model="formStyleConfig.fillColor" type="color" ></label>
                     <label>填充不透明度：<br/><input v-model="formFillOpacity" type="range" min='0' max="100" ></label>
                 </fieldset>
 
