@@ -1,30 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#BMapContainer{
+
+#BMapContainer {
     position: absolute;
     left: 0;
-    right: 300px;
+    right: 360px;
     height: 100%;
 }
-#cs{
+
+#sidepanel {
     /*display: none;*/
-float: right;
+    float: right;
+    width: 350px;
+}
+#citylist{
+    float: left;
+    width:150px;
+}
+#configSet{
+    float: left;
+    width:200px;
 }
 
-.description{
-    display: inline;
+
+#fullPage {
+    /*transform: scale(0.3); */
+    /* width:3000px; */
+    /* position: relative; */
+    /* height: 2000px; */
+    height: 100%;
 }
-#fullPage{
 
-/*transform: scale(0.3); */
-
-/* width:3000px; */
-
-/* position: relative; */
-
-/* height: 2000px; */
-
-height: 100%;
+label {
+    display: block
 }
