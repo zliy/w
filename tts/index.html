@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <button onclick="play();">play</button>
+    <script>
+        const REQURL =
+            'https://cxl-services.appspot.com/proxy?url=https%3A%2F%2Ftexttospeech.googleapis.com%2Fv1beta1%2Ftext%3Asynthesize'
+
+        async function play () {
+
+            const body = JSON.stringify({
+                input: {
+                    text: text.value
+                },
+                voice: {
+                    languageCode: 'en-US',
+                    name: 'en-US-Wavenet-E'
+                },
+                audioConfig: {
+                    audioEncoding: 'LINEAR16',
+                    pitch: '0.00', // [+-20]
+                    speakingRate: '1',
+                    volumeGainDb: '5'
+                }
+            })
+
+            document.body.style.cursor = 'progress'
+            let resp = await fetch(REQURL, {
+                credentials: 'omit',
+                referrerPolicy: 'no-referrer-when-downgrade',
+                body: body,
+                method: 'POST',
+                mode: 'cors'
+            })
+            let jsonObj = await resp.json()
+            document.body.style.cursor = 'default';
+
+            new Audio(`data:audio/wav;base64,${jsonObj.audioContent}`).play()
+        }
+    </script>
+</body>
+
+</html>
