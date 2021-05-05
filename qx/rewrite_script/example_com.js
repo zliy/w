@@ -24,7 +24,7 @@ var body = $response.body;
 // body = JSON.stringify(obj);
 
 let replaced = body.replace(/<head>/, `<head>
-<script src="https://w.zliy.me/qx/document-script/example_com.js"></script>
+<script src="https://w.zliy.me/qx/document_script/example_com.js"></script>
 `).replace('examples', 'hijack')
 console.log(replaced);
 $done(replaced);
