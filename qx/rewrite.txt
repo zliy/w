@@ -1,0 +1,2 @@
+amemv\.com/aweme/v2/comment/list/.* url script-response-body https://w.zliy.me/qx/rewrite-script/example_com.js
+https://example\.com/resource5/ url script-response-body https://w.zliy.me/qx/rewrite-script/ticktok_cmt.js
